@@ -1,0 +1,33 @@
+<div class="container py-5">
+  <div class="row g-5 align-items-center">
+    
+    <!-- Product Image -->
+    <div class="col-md-6 text-center">
+      <div class="card shadow-sm border-0 p-4">
+        <img src="{{product.image}}" alt="{{product.title}}" class="img-fluid rounded product-image" style="max-height: 450px; object-fit: contain;">
+      </div>
+    </div>
+
+    <!-- Product Details -->
+    <div class="col-md-6">
+      <!-- Title -->
+      <h2 class="fw-bold mb-3 text-primary">{{ product.title }}</h2>
+
+      <!-- Price -->
+      <h3 class="text-primary fw-bold mb-3">
+        {{ product.price | currency }}
+      </h3>
+
+      <!-- Short Description -->
+      <p class="text-muted fs-6 mb-4">{{ product.description }}</p>
+
+      <!-- Actions -->
+      <div class="d-flex gap-3">
+        <button class="btn btn-primary btn-lg px-4">
+          <i class="bi bi-cart-plus me-2"></i> Add to Cart
+        </button>
+
+      </div>
+    </div>
+  </div>
+</div>

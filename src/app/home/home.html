@@ -1,0 +1,16 @@
+
+<div class="container mt-3">
+    <app-slide></app-slide>
+</div>
+
+<div class="container">
+    <div class="row">
+    @for (item of productService.getProducts(); track item.id){
+        <app-product-card 
+        class="col-md-3 mt-2"
+        [product]="item"
+        (onAddToCart)="addToCart($event)"
+        ></app-product-card>
+    }
+</div>
+</div>

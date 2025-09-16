@@ -1,0 +1,30 @@
+/* Navbar */
+.navbar {
+  background-color: #ffffff !important; /* white navbar */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 0.5rem 1rem;
+}
+
+.navbar-brand img {
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.1);
+}
+
+.nav-link {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333 !important;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #4ab6f9 !important; /* Bootstrap green */
+  border-bottom: 2px solid #4ab6f9;
+}
+
+.sticky-top {
+  z-index: 1030;
+}

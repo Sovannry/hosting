@@ -1,0 +1,26 @@
+<div class="card-container">
+  <div class="product-card">
+    <div class="image-wrapper">
+      <span class="discount-badge">{{ product.category }}</span>
+      <img [src]="product.image" alt="Product Image" class="product-image" />
+    </div>
+
+    <div class="product-details">
+      <h2 class="product-title">{{ product.title }}</h2>
+
+      <p style="font-size: 1rem; cursor: pointer;"
+         class="product-description"
+         [routerLink]="['/product-detail']"
+         [queryParams]="{product_id: product.id}">
+         {{ product.description }}
+      </p>
+
+      <div class="product-price">{{ product.price | currency }}</div>
+
+      <!-- Center Button -->
+      <div class="d-flex justify-content-center mt-3">
+        <button class="buy-button" (click)="addToCart(product)">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</div>
